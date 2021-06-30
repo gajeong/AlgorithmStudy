@@ -3,7 +3,6 @@ from collections import deque
 global N, M
 N, M = map(int, sys.stdin.readline().rstrip().split(' '))
 lst = [[] for i in range(N+1)]
-print(lst)
 
 # 신뢰하는 컴퓨터 이중리스트로 정리
 for i in range(M):
@@ -15,6 +14,8 @@ def BFS(lst):
     answer = []
     # 순차적 인덱스 번호부터 큐에 담기 반복
     for i in range(1, N+1):
+        if not lst[i]:
+            continue
         count = 0
         visit = [0 for i in range(N+1)]
         queue = deque()
@@ -32,7 +33,6 @@ def BFS(lst):
 
 
 arr = BFS(lst)
-print(arr)
 for i, num in enumerate(arr):
     if num == max(arr):
         print(i+1, end=' ')
