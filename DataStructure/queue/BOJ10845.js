@@ -15,8 +15,12 @@ const solution = (input) =>{
     let nowComm = input[i].split(" ")
     switch(newCommon[0]){
       case "push":
+        data[tail-1] = newCommon[1];
+        tail +=1;
         break;
       case "pop":
+        str += data[head] + "\n";
+        head += 1
         break;  
       case "size":
         break;  
