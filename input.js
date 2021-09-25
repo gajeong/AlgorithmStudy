@@ -26,4 +26,7 @@ main(rl)
 
 // BOJ 문제 풀때 입력  
 var fs = require("fs");
-var input = fs.readFileSync('/dev/stdin').toString().split(' ');
+var input = fs.readFileSync('/dev/stdin').toString().trim().split(' ');
+
+// 입력을 배열로 만들때 map에 자료형 추가하면 됨
+var input = fs.readFileSync('/dev/stdin').toString().trim().split(' ').map(Number);
