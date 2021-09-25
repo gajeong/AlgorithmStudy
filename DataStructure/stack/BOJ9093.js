@@ -1,7 +1,4 @@
 // 단어 뒤집기 
-
-const { reverse } = require("dns");
-
 // 자료구조 
 var test = "2\nI am happy today\nWe want to win the first prize";
 var input = test.toString().trim().split('\n');
